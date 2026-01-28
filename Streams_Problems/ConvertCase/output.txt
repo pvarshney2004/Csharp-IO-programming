@@ -1,0 +1,3 @@
+﻿hello world
+c# streams are powerful
+file handling is important
