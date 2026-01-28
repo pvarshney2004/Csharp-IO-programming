@@ -52,6 +52,7 @@ o Example: "Mumbai Indians" → "Mumbai ***"
                 string[] data = reader.ReadLine().Split(',');
                 data[1] = MaskTeam(data[1]); // masking team1
                 data[2] = MaskTeam(data[2]); // masking team2
+                data[5] = MaskTeam(data[5]); // masking winner name
                 data[6] = "REDACTED"; // redacting player_of_match
 
                 writer.WriteLine(string.Join(",", data));
@@ -62,13 +63,24 @@ o Example: "Mumbai Indians" → "Mumbai ***"
         public static void ProcessJSONData(string inputPath, string outputPath)
         {
             string json = File.ReadAllText(inputPath);
+
             List<Match> matches = JsonSerializer.Deserialize<List<Match>>(json);
+
             foreach (var match in matches)
             {
+                // Mask team names
                 match.team1 = MaskTeam(match.team1);
                 match.team2 = MaskTeam(match.team2);
                 match.winner = MaskTeam(match.winner);
                 match.player_of_match = "REDACTED";
+
+                // Mask score keys
+                Dictionary<string, int> newScore = new Dictionary<string, int>();
+                foreach (var s in match.score)
+                {
+                    newScore[MaskTeam(s.Key)] = s.Value;
+                }
+                match.score = newScore;
             }
             string censoredJson = JsonSerializer.Serialize(
                 matches,
@@ -80,8 +92,12 @@ o Example: "Mumbai Indians" → "Mumbai ***"
         // method to mask the team
         public static string MaskTeam(string team)
         {
-            string firstWord = team.Split(' ')[0];
-            return firstWord + " ****";
+            string[] words = team.Split(' ');
+            if (words.Length == 2)
+            {
+                return words[0] + " ***";
+            }
+            return words[0] + " *** " + words[^1];
         }
     }
 }
