@@ -97,6 +97,71 @@ The problems are designed to simulate **real-world data processing tasks** commo
 
 ---
 
+### 🔹 `streams-problems` branch
+This branch focuses on **Stream-based I/O operations in C#**, covering low-level and high-level stream handling techniques.  
+The problems emphasize **efficient file processing, serialization, memory streams, buffering, and binary data handling**, which are essential for building scalable and performance-aware applications.
+
+---
+
+## 📝 Practice Problems
+
+### 🔹 File & Basic Stream Operations
+
+- **File Handling – Read and Write a Text File**  
+  Read the contents of a text file and write them into a new file.  
+  Handle missing source files and ensure destination file creation using `FileStream`.
+
+- **Read User Input from Console and Save to File**  
+  Accept user details (name, age, favorite programming language) from the console and store them in a file using stream readers and writers.
+
+---
+
+### 🔹 Buffered & Performance-Oriented Streams
+
+- **Buffered Streams – Efficient File Copy**  
+  Copy a large file using `BufferedStream` and compare its performance with unbuffered file streams using a stopwatch.
+
+- **Filter Streams – Uppercase to Lowercase Conversion**  
+  Read text from a file and write it to another file while converting all uppercase characters to lowercase efficiently.
+
+---
+
+### 🔹 Memory & Byte Streams
+
+- **ByteArray Stream – Convert Image to Byte Array**  
+  Convert an image file into a byte array using `MemoryStream` and recreate the image from the byte array.
+
+---
+
+### 🔹 Serialization & Binary Streams
+
+- **Serialization – Save and Retrieve Objects**  
+  Serialize and deserialize a list of employee objects using binary or JSON serialization techniques.
+
+- **Data Streams – Store and Retrieve Primitive Data**  
+  Store student details (roll number, name, GPA) in a binary file using `BinaryWriter` and retrieve them using `BinaryReader`.
+
+---
+
+### 🔹 Stream-Based Data Processing
+
+- **Count Words in a File**  
+  Read a text file, count word occurrences using a dictionary, and display the top five most frequently occurring words.
+
+---
+
+### 🎯 Learning Outcomes
+
+- Understanding **FileStream, StreamReader, and StreamWriter**
+- Efficient file handling using **BufferedStream**
+- Working with **MemoryStream and byte arrays**
+- Binary data processing with **BinaryReader and BinaryWriter**
+- Object serialization and deserialization
+- Performance comparison between buffered and unbuffered streams
+- Real-world text analysis using streams and collections
+  
+---
+
 ## 👤 Author
 **Prashant Varshney**  
 B.Tech CSE (Data Analytics)  
