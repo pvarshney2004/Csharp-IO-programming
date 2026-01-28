@@ -162,6 +162,53 @@ The problems emphasize **efficient file processing, serialization, memory stream
   
 ---
 
+### 🔹 `json-problems` branch
+This branch focuses on **JSON data handling in C#**, covering creation, parsing, transformation, validation, and real-world data processing.  
+The problems range from **basic JSON operations** to **advanced use cases** involving file integration, data filtering, and reporting.
+
+---
+
+## 📝 Practice Problems
+
+### 🔹 Basic JSON Handling
+
+- Create a JSON object for a **Student** with fields: name, age, and subjects (array).
+- Convert a **C# object (Car class)** into JSON format.
+- Merge two JSON objects into a single JSON object.
+- Convert a **list of C# objects** into a JSON array.
+- Parse JSON data and **filter records where age > 25**.
+- Validate an **email field using JSON Schema**.
+- Convert **JSON to XML** format.
+- Generate a **JSON report from database records**.
+
+---
+
+### 🏏 IPL and Censorship Analyzer
+
+**Problem Statement:**  
+Develop a C# application that reads **IPL match data** from JSON and CSV files, processes the data based on defined censorship rules, and writes the sanitized output to new files.
+
+**Key Tasks:**
+- Read IPL match data from **JSON and CSV** sources.
+- Apply **censorship rules**:
+  - Mask team names partially.
+  - Redact sensitive fields like player of the match.
+- Generate **sanitized JSON output** after censorship.
+- Ensure data integrity while transforming and exporting data.
+
+---
+
+### 🎯 Learning Outcomes
+
+- Working with **JSON serialization and deserialization**
+- Parsing and filtering JSON data in C#
+- Applying **data validation and schema checks**
+- Converting data between **JSON, CSV, and XML**
+- Solving **real-world data processing problems** using JSON
+- Strengthening file-based data handling and transformation skills
+
+---
+
 ## 👤 Author
 **Prashant Varshney**  
 B.Tech CSE (Data Analytics)  
